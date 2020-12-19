@@ -7,6 +7,14 @@
  1. Java
  2. Cassandra
  3. Maven
+ 4. init Cassandra with cqlsh
+    4.1 docker exec -it xxx  (进入容器)
+    4.2 cqlsh
+    4.3 CREATE KEYSPACE IF NOT EXISTS user WITH REPLICATION = {'class': 'SimpleStrategy','replication_factor':1};
+    4.4 use user;
+    4.5 CREATE TABLE user (id int, name varchar, address varchar, salary int, PRIMARY KEY (id) );
+    4.6 INSERT INTO user (id, name, address, salary) VALUES (1,'justin', 'some where', 500000);
+    4.7 select * from user; 
 
 #### How to run the application?
 
